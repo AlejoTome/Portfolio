@@ -64,13 +64,13 @@
         /* La imagen se ajustará para cubrir el contenedor */
         background-repeat: no-repeat;
         background-position: center;
-        block-size: 1500px;
+        block-size: 1050px;
         /* Ajusta la altura deseada para la sección en dispositivos móviles */
         color: rgb(255, 250, 250);
         text-align: center;
         padding: 40px;
         /* Ajusta el relleno para dar más espacio al texto */
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;

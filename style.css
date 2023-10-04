@@ -61,24 +61,28 @@
     .fondo {
         background-image: url('./HD-wallpaper-happy-froggy.jpg');
         background-size: cover;
+        /* La imagen se ajustará para cubrir el contenedor */
         background-repeat: no-repeat;
         background-position: center;
-        block-size: 300px;
-        /* Ajusta la altura */
+        block-size: 1000px;
+        /* Ajusta la altura deseada para la sección en dispositivos móviles */
         color: rgb(255, 250, 250);
-        /* Ajusta el color del texto para que sea legible en la imagen */
         text-align: center;
-        /* Centra el contenido en la sección */
-        padding: 20px;
-        /* Agrega el código proporcionado al final del bloque de estilos */
+        padding: 40px;
+        /* Ajusta el relleno para dar más espacio al texto */
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .fondo p {
         font-size: 24px;
+        /* Ajusta el tamaño del texto según tu preferencia */
         margin-block-end: 5px;
-        text-shadow: -1px -1px 0 rgb(66, 66, 66), 1px -1px 0 rgb(66, 66, 66), -1px 1px 0 rgb(66, 66, 66), 1px 1px 0 black;
+        overflow-y: auto;
+        /* Agrega desplazamiento vertical si el texto es muy largo */
     }
     /*DIVISOR ENTRE CADA SECCION*/
     

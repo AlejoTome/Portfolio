@@ -1,6 +1,6 @@
 .hero {
     background: #d6d6d6;
-    color: rgb(3, 3, 3);
+    color: #030303;
     padding: 5px;
     text-align: center;
 }
@@ -58,6 +58,7 @@
 body {
     margin: 0;
     padding: 0;
+    background: #fcfcfc;
 }
 
 .fondo {
@@ -93,10 +94,45 @@ body {
 .divider {
     block-size: 10px;
     /* Altura de la línea divisoria */
-    background-color: #ffffff;
+    background-color: #fcfcfc;
     /* Color de la línea divisoria */
     margin: 20px 0;
     /* Margen superior e inferior */
+}
+
+
+/*columnas*/
+
+#contenedor {
+    text-align: left;
+    margin: auto;
+}
+
+#lateral {
+    width: 50%;
+    /* Este será el ancho que tendrá tu columna */
+    float: right;
+    /* Aquí determinas de lado quieres quede esta "columna" */
+}
+
+#principal {
+    width: 50%;
+    float: left;
+    /* Aquí determinas de lado quieres quede esta "columna" */
+}
+
+.curriculum {
+    background-color: #ffffff;
+    font-family: sans-serif;
+}
+
+
+/* Para limpiar los floats */
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 
@@ -105,7 +141,7 @@ body {
 .card {
     max-inline-size: 300px;
     border-radius: 0.5rem;
-    background-color: #ccc;
+    background-color: #d6d6d6;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border: 1px solid transparent;
 }
@@ -360,7 +396,7 @@ footer p {
     }
 }
 
-@media (max-width: 1920px) and (max-height: 1080px) {
+@media (max-inline-size: 1920px) and (max-block-size: 1080px) {
     .hero {
         padding: 20px;
     }
@@ -385,7 +421,7 @@ footer p {
 }
 
 .card {
-    max-inline: max-inline-size: 100%;
+    max-lines: 100%;
     block-size: auto;
 }
 

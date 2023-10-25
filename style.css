@@ -91,6 +91,12 @@ body {
     margin-block-end: 2px;
     overflow-y: auto;
     /* Agrega desplazamiento vertical si el texto es muy largo */
+    max-width: 90%;
+    /* Establece un ancho máximo para el párrafo */
+    padding: 10px;
+    /* Añade relleno alrededor del párrafo para mantenerlo alejado de los bordes */
+    word-wrap: break-word;
+    /* Rompe las palabras largas en líneas cuando sea necesario */
 }
 
 
@@ -316,6 +322,7 @@ footer p {
         font-size: 24px;
         margin-block-end: 5px;
         overflow-y: auto;
+        block-size: auto;
     }
     .divider {
         block-size: 10px;
@@ -489,6 +496,7 @@ footer p {
         font-size: 24px;
         margin-block-end: 5px;
         overflow-y: auto;
+        block-size: auto;
     }
     .divider {
         block-size: 10px;
@@ -662,6 +670,7 @@ footer p {
         font-size: 24px;
         margin-block-end: 5px;
         overflow-y: auto;
+        block-size: auto;
     }
     .divider {
         block-size: 10px;
@@ -835,6 +844,7 @@ footer p {
         font-size: 24px;
         margin-block-end: 5px;
         overflow-y: auto;
+        block-size: auto;
     }
     .divider {
         block-size: 10px;
@@ -1008,6 +1018,7 @@ footer p {
         font-size: 24px;
         margin-block-end: 5px;
         overflow-y: auto;
+        block-size: auto;
     }
     .divider {
         block-size: 10px;
@@ -1181,6 +1192,7 @@ footer p {
         font-size: 24px;
         margin-block-end: 5px;
         overflow-y: auto;
+        block-size: auto;
     }
     .divider {
         block-size: 10px;
@@ -1353,6 +1365,7 @@ footer p {
         font-size: 24px;
         margin-block-end: 5px;
         overflow-y: auto;
+        block-size: auto;
     }
     .divider {
         block-size: 10px;

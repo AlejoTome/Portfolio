@@ -628,7 +628,7 @@ footer p {
     }
 }
 
-@media (max-inline-size: 411px) and (max-block-size: 731px) {
+@media(max-inline-size: 411px) and (max-block-size: 731px) {
     body {
         margin: 0;
         padding: 0;

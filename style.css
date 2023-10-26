@@ -4,10 +4,19 @@ h1 {
 }
 
 .hero {
-    background: #d6d6d6;
+    background: hsl(0, 0%, 84%, 0.5);
     color: #030303;
     padding: 5px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    rigt: 0;
+    width: 100%;
+    padding: 0px 0px;
+    z-index: 1;
+    margin-bottom: 50px;
+    transition: background-color 0.3s;
 }
 
 .btn {
@@ -67,7 +76,7 @@ body {
 }
 
 .fondo {
-    background-image: url('./HD-wallpaper-happy-froggy.jpg');
+    background-image: url('./Programar-en-IDE.webp');
     background-size: cover;
     /* La imagen se ajustará para cubrir el contenedor */
     background-repeat: no-repeat;

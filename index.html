@@ -21,7 +21,7 @@
     <meta name="keywords" content="portfolio, editor de fotos, editor de videos, editor de audio, programador front-end">
     <link rel="icon" href="./BytesizePortfolio.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="blablabla.js">
+    <script src="script.js">
     </script>
     <title>Alejo Geronimo Tomé - Desarrollador Web Full Stack</title>
 </head>
@@ -29,9 +29,6 @@
 <body>
 
     <div class="hero">
-        <center>
-            <h1>Hello world!</h1>
-        </center>
         <nav>
             <ul>
                 <button class="btn" onclick="location.href='#aboutme'">
@@ -74,7 +71,7 @@
         <section id="Cv">
 
             <div class="fondoCv">
-                <h1>Alejo Geronimo Tomé</h1>
+                <h1> Alejo Geronimo Tomé</h1>
                 <h3>developer web fullstack</h3>
                 <img src="./HD-wallpaper-happy-froggy.jpg" alt="foto cv alejo">
             </div>
@@ -148,18 +145,22 @@
                         <p>Nivel Escrito Intermedio.
                         </p>
                         <h4>
-                            <font color=blue><b><li>EXPERIENCIA LABORAL</li></b></font>
+                            <font color=blue>
+                                <li>EXPERIENCIA LABORAL</li>
+                            </font>
                         </h4>
                         <b>Desarrollador web y asistente de
                                 marketing digital.</b>
-                        <p>
-                            <li> Desarrollo web para diversos clientes.</li>
-                            <li>Optimización de páginas web (CEO).
-                            </li>
-                            <li>Análisis y recopilación de datos para redes sociales.</li>
-                        </p>
+
+                        <li> Desarrollo web para diversos clientes.</li>
+                        <li>Optimización de páginas web (CEO).
+                        </li>
+                        <li>Análisis y recopilación de datos para redes sociales.</li>
+
                         <h4>
-                            <font color=blue><b><li>CONOCIMIENTOS</li></b></font>
+                            <font color=blue>
+                                <li>CONOCIMIENTOS</li>
+                            </font>
                         </h4>
                         <p>HTML 5; CSS 3; JavaScript; BootsTrap 5 (básico); Node JS (básico); React (básico); Git; GitHub; Integración de APIs; Linux; Manejo de Figma (básico); UI/UX (básico); Manejo de paquete office; Manejo de photoshop; Edición de audio
                             y video.</p>
@@ -167,9 +168,22 @@
                     </div>
                 </div>
             </section>
+        </section>
     </div>
-    <div class="divider"></div>
+
+    <div class="divider "></div>
+    <div class="divider "></div>
+    <div class="divider "></div>
+
     <section id="proyect">
+        <h1>proyects</h1>
+        <h3></h3>
+        <div class="divider "></div>
+        <div class="divider "></div>
+        <div class="divider "></div>
+        <div class="divider "></div>
+        <div class="divider "></div>
+
         <a href="https://alejotome.github.io/Brandia-catalogo.io/" class="card">
             <img id="fotocarta" src="./brandia portada.PNG">
             <div class="card__content">
@@ -180,65 +194,99 @@
     </section>
     <div class="divider "></div>
     <h1>Contact</h1>
+
+
     <h3>If you liked what you saw, I invite you to get in touch with me. I am open to proposals, either as a freelancer or in a more permanent capacity, both in a remote mode if you are from outside my city and in a hybrid mode if you are from my city and
         its surroundings</h3>
+    </div>
+    </div>
     <section id="contact">
-        <form class="form">
+        <div class="contact-section">
+            <div id="contact">
+                <form action="/enviar_correo" method="post" class="form" id="contactForm">
+                    <div class="flex">
+                        <label>
+                            <input class="input" type="text" name="nombre" required="" placeholder="First Name">
+                        </label>
 
-            <div class="flex">
-                <label>
-                    <input class="input" type="text" placeholder="" required="">
-                    <span class="text-box">first name</span>
-                </label>
+                        <label>
+                            <input class="input" type="text" name="apellido" required="" placeholder="Last Name">
+                        </label>
+                    </div>
 
-                <label>
-                    <input class="input" type="text" placeholder="" required="">
-                    <span class="text-box">last name</span>
-                </label>
+                    <label>
+                        <input class="input" type="email" name="correo" required="" placeholder="Email">
+                    </label>
+
+                    <label>
+                        <textarea class="input01" name="mensaje" rows="3" required="" placeholder="Message"></textarea>
+                    </label>
+
+                    <button class="btn" type="submit">
+                        <span class="top-key"></span>
+                        <span class="text">Submit</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </button>
+                    <!-- Agrega este bloque en tu HTML -->
+                    <script>
+                        const form = document.getElementById('contactForm');
+
+                        form.addEventListener('submit', async(event) => {
+                            event.preventDefault();
+
+                            const formData = new FormData(form);
+                            const response = await fetch('/enviar_correo', {
+                                method: 'POST',
+                                body: formData
+                            });
+
+                            if (response.ok) {
+                                // Envío exitoso
+                                form.reset(); // Limpiar el formulario
+                                alert('Mensaje enviado con éxito. ¡Te responderemos pronto!');
+                            } else {
+                                // Error en el envío
+                                alert('Hubo un problema al enviar el mensaje. Inténtalo nuevamente.');
+                            }
+                        });
+                    </script>
+
+                </form>
             </div>
+        </div>
 
-            <label>
-                <input class="input" type="email" placeholder="" required="">
-                <span class="text-box">email</span>
-            </label>
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <h3>anoter contact media </h3>
+        <div class="social-media-icons">
+            <!-- SVG icons for social media links -->
+            <a href="https://www.instagram.com/alejogeronimotome/">
+                <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                <path d="M11 3.5h1M4.5.5h6a4 4 0 014 4v6a4 4 0 01-4 4h-6a4 4 0 01-4-4v-6a4 4 0 014-4zm3 10a3 3 0 110-6 3 3 0 010 6z" stroke="#000"></path>
+            </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/alejo-tome-5b26a6249/"><svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+            <path d="M4.5 6v5m6 0V8.5a2 2 0 10-4 0V11 6M4 4.5h1M1.5 .5h12a1 1 0 011 1v12a1 1 0 01-1 1h-12a1 1 0 01-1-1v-12a1 1 0 011-1z" stroke="#000"></path>
+        </svg></a>
+            <a href="https://twitter.com/alejotome"><svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+            <path d="M14.478 1.5l.5-.033a.5.5 0 00-.871-.301l.371.334zm-.498 2.959a.5.5 0 10-1 0h1zm-6.49.082h-.5.5zm0 .959h.5-.5zm-6.99 7V12a.5.5 0 00-.278.916L.5 12.5zm.998-11l.469-.175a.5.5 0 00-.916-.048l.447.223zm3.994 9l.354.353a.5.5 0 00-.195-.827l-.159.474zm7.224-8.027l-.37.336.180.199.265-.040-.075-.495zm1.264-.94c.051.778.003 1.25-.123 1.606-.122.345-.336.629-.723 1l.692.722c.438-.42.776-.832.974-1.388.193-.546.232-1.178.177-2.006l-.998.066zm0 3.654V4.46h-1v.728h1zm-6.99-.646V5.5h1v-.959h-1zm0 .959V6h1v-.5h-1zM10.525 1a3.539 3.539 0 00-3.537 3.541h1A2.539 2.539 0 0110.526 2V1zm2.454 4.187C12.98 9.503 9.487 13 5.18 13v1c4.86 0 8.8-3.946 8.8-8.813h-1zM1.03 1.675C1.574 3.127 3.614 6 7.49 6V5C4.174 5 2.421 2.54 1.966 1.325l-.937.35zm.021-.398C.004 3.373-.157 5.407.604 7.139c.759 1.727 2.392 3.055 4.73 3.835l.317-.948c-2.155-.72-3.518-1.892-4.132-3.29-.612-1.393-.523-3.11.427-5.013l-.895-.446zm4.087 8.87C4.536 10.75 2.726 12 .5 12v1c2.566 0 4.617-1.416 5.346-2.147l-.708-.706zm7.949-8.009A3.445 3.445 0 0010.526 1v1c.721 0 1.37.311 1.82.809l.74-.671zm-.296.83a3.513 3.513 0 002.06-1.134l-.744-.668a2.514 2.514 0 01-1.466.813l.15.989zM.222 12.916C1.863 14.01 3.583 14 5.18 14v-1c-1.63 0-3.048-.011-4.402-.916l-.556.832z" fill="#000"></path>
+        </svg>
+        </a>
+        </div>
+        </div>
 
-            <label>
-                <input class="input" placeholder="" type="tel" required="">
-                <span class="text-box">contact number</span>
-            </label>
-            <label>
-                <textarea class="input01" placeholder="" rows="3" required=""></textarea>
-                <span class="text-box">message</span>
-            </label>
-
-            <button href="#" class="btn"> 
-              <span class="top-key"></span>
-              <span class="text">submit</span>
-              <span class="bottom-key-1"></span>
-              <span class="bottom-key-2"></span>
-            </button>
-        </form>
     </section>
+    <div class="divider "></div>
+    <div class="divider "></div>
+    <div class="divider "></div>
+    <div class="divider "></div>
     <div class="divider "></div>
 
     <footer>
         <section>
 
-            <p>Thank you very much for visiting my page. I hope it has been to your liking. Here, I provide the rest of my social media links for you to explore.</p>
-        </section>
-        <section>
-            <a href="https://www.instagram.com/alejogeronimotome/">
-                <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-                    <path d="M11 3.5h1M4.5.5h6a4 4 0 014 4v6a4 4 0 01-4 4h-6a4 4 0 01-4-4v-6a4 4 0 014-4zm3 10a3 3 0 110-6 3 3 0 010 6z" stroke="#000"></path>
-                </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/alejo-tome-5b26a6249/"><svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-                <path d="M4.5 6v5m6 0V8.5a2 2 0 10-4 0V11 6M4 4.5h1M1.5 .5h12a1 1 0 011 1v12a1 1 0 01-1 1h-12a1 1 0 01-1-1v-12a1 1 0 011-1z" stroke="#000"></path>
-            </svg></a>
-            <a href="https://twitter.com/alejotome"><svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-                <path d="M14.478 1.5l.5-.033a.5.5 0 00-.871-.301l.371.334zm-.498 2.959a.5.5 0 10-1 0h1zm-6.49.082h-.5.5zm0 .959h.5-.5zm-6.99 7V12a.5.5 0 00-.278.916L.5 12.5zm.998-11l.469-.175a.5.5 0 00-.916-.048l.447.223zm3.994 9l.354.353a.5.5 0 00-.195-.827l-.159.474zm7.224-8.027l-.37.336.180.199.265-.040-.075-.495zm1.264-.94c.051.778.003 1.25-.123 1.606-.122.345-.336.629-.723 1l.692.722c.438-.42.776-.832.974-1.388.193-.546.232-1.178.177-2.006l-.998.066zm0 3.654V4.46h-1v.728h1zm-6.99-.646V5.5h1v-.959h-1zm0 .959V6h1v-.5h-1zM10.525 1a3.539 3.539 0 00-3.537 3.541h1A2.539 2.539 0 0110.526 2V1zm2.454 4.187C12.98 9.503 9.487 13 5.18 13v1c4.86 0 8.8-3.946 8.8-8.813h-1zM1.03 1.675C1.574 3.127 3.614 6 7.49 6V5C4.174 5 2.421 2.54 1.966 1.325l-.937.35zm.021-.398C.004 3.373-.157 5.407.604 7.139c.759 1.727 2.392 3.055 4.73 3.835l.317-.948c-2.155-.72-3.518-1.892-4.132-3.29-.612-1.393-.523-3.11.427-5.013l-.895-.446zm4.087 8.87C4.536 10.75 2.726 12 .5 12v1c2.566 0 4.617-1.416 5.346-2.147l-.708-.706zm7.949-8.009A3.445 3.445 0 0010.526 1v1c.721 0 1.37.311 1.82.809l.74-.671zm-.296.83a3.513 3.513 0 002.06-1.134l-.744-.668a2.514 2.514 0 01-1.466.813l.15.989zM.222 12.916C1.863 14.01 3.583 14 5.18 14v-1c-1.63 0-3.048-.011-4.402-.916l-.556.832z" fill="#000"></path>
-            </svg>
-            </a>
+            <p>Thank you very much for visiting my page.</p>
         </section>
     </footer>
 </body>

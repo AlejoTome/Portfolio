@@ -163,12 +163,12 @@
     
     #lateral {
         inline-size: 50%;
-        float: inline-end;
+        float: right;
     }
     
     #principal {
         inline-size: 50%;
-        float: inline-start;
+        float: left;
     }
     
     .curriculum {

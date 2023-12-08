@@ -1,8 +1,61 @@
+    .sangria {
+        padding-inline-start: 20px;
+    }
+    
+    .sangria-adicional {
+        padding-inline-start: 40px;
+    }
+    
+    body {
+        font-family: "jost", sans-serif;
+    }
+    
+    h1 {
+        color: #0400f2;
+        margin-inline-end: 2px;
+    }
+    
+    h2,
+    h3,
+    p,
+    a,
+    button {
+        margin-inline-end: 2px;
+        /* Adjust as needed */
+    }
+    
+    .social-media-icons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .social-icon {
+        display: flex;
+        align-items: center;
+        block-size: 200%;
+    }
+    
+    .social-media-icons svg {
+        inline-size: 30px;
+        block-size: 30px;
+    }
+    
     .hero {
-        background: #d6d6d6;
-        color: rgb(3, 3, 3);
+        background: hsl(0, 0%, 84%, 0.5);
+        color: #0400f2;
         padding: 5px;
         text-align: center;
+        position: fixed;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        inline-size: 100%;
+        padding: 0px 0px;
+        z-index: 1;
+        margin-block-end: 50px;
+        transition: background-color 0.3s;
     }
     
     .btn {
@@ -19,10 +72,10 @@
     }
     
     .btn:after {
+        background: #0400f2;
         content: " ";
         inline-size: 0%;
         block-size: 100%;
-        background: #0400f2;
         position: absolute;
         transition: all 0.4s ease-in-out;
         inset-inline-end: 0;
@@ -56,118 +109,140 @@
     body {
         margin: 0;
         padding: 0;
+        background: #fcfcfc;
     }
     
     .fondo {
-        background-image: url('./HD-wallpaper-happy-froggy.jpg');
+        background-image: url('./Programar-en-IDE.webp');
         background-size: cover;
+        /* La imagen se ajustará para cubrir el contenedor */
         background-repeat: no-repeat;
         background-position: center;
-        block-size: 300px;
-        /* Ajusta la altura */
+        block-size: auto;
+        /* Ajusta la altura deseada para la sección en dispositivos móviles */
         color: rgb(255, 250, 250);
-        /* Ajusta el color del texto para que sea legible en la imagen */
         text-align: center;
-        /* Centra el contenido en la sección */
-        padding: 20px;
-        /* Agrega el código proporcionado al final del bloque de estilos */
-        border-radius: 10px;
+        padding: 40px;
+        /* Ajusta el relleno para dar más espacio al texto */
+        border-radius: 5px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .fondo p {
-        font-size: 24px;
-        margin-block-end: 5px;
-        text-shadow: -1px -1px 0 rgb(66, 66, 66), 1px -1px 0 rgb(66, 66, 66), -1px 1px 0 rgb(66, 66, 66), 1px 1px 0 black;
+        font-size: 30px;
+        /* Ajusta el tamaño del texto según tu preferencia */
+        margin-block-end: 2px;
+        overflow-y: auto;
+        /* Agrega desplazamiento vertical si el texto es muy largo */
+        max-inline-size: fit-content;
+        /* Establece un ancho máximo para el párrafo */
+        padding: 10px;
+        /* Añade relleno alrededor del párrafo para mantenerlo alejado de los bordes */
+        word-wrap: break-word;
+        /* Rompe las palabras largas en líneas cuando sea necesario */
     }
     /*DIVISOR ENTRE CADA SECCION*/
     
     .divider {
         block-size: 10px;
         /* Altura de la línea divisoria */
-        background-color: #ffffff;
+        background-color: #fcfcfc;
         /* Color de la línea divisoria */
         margin: 20px 0;
         /* Margen superior e inferior */
     }
+    /*columnas*/
+    
+    #contenedor {
+        text-align: center;
+        margin: auto;
+    }
+    
+    #lateral {
+        inline-size: 50%;
+        float: right;
+    }
+    
+    #principal {
+        inline-size: 50%;
+        float: left;
+    }
+    
+    .curriculum {
+        background-color: #ffffff;
+        font-family: sans-serif;
+    }
+    
+    .datos {
+        background-origin: #ffff;
+    }
     /*targeta*/
     
     .card {
-        max-inline-size: 300px;
-        border-radius: 0.5rem;
-        background-color: #ccc;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-        border: 1px solid transparent;
-    }
-    
-    .card a {
-        text-decoration: none
-    }
-    
-    .content {
-        padding: 1.1rem;
-    }
-    
-    .image {
-        inline-size: 100%;
-        block-size: 150px;
-        background-color: rgb(239, 205, 255);
+        position: relative;
+        inline-size: 300px;
+        block-size: 200px;
+        background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
     }
     
-    .image img {
+    .card:hover {
+        transform: rotate(-5deg) scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card__content {
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        inline-size: 100%;
+        block-size: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #fff;
+        opacity: 0;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    
+    .card:hover .card__content {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 1;
+    }
+    
+    .card__title {
+        margin: 0;
+        font-size: 50px;
+        color: #333;
+        font-weight: 700;
+    }
+    
+    .card__description {
+        margin: 5px 0 0;
+        font-size: 15px;
+        color: #777;
+        line-height: 1.4;
+    }
+    
+    .card:hover svg {
+        scale: 0;
+        transform: rotate(-45deg);
+    }
+    
+    #fotocarta {
         inline-size: 100%;
         block-size: 100%;
         object-fit: cover;
     }
-    
-    .title {
-        color: #111827;
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-        font-weight: 600;
-    }
-    
-    .desc {
-        margin-block-start: 0.5rem;
-        color: #6B7280;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-    }
     /*estilos bloque contacto*/
-    
-    #contact {
-        inline-size: calc(100% - 5px);
-        /* Ajusta el ancho al 100% menos 5 píxeles */
-        margin: 20px auto;
-        /* Centrar el contenedor */
-        padding: 20px;
-        background-color: #6B7280;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    /* Estilos para las etiquetas de input y textarea */
-    
-    label {
-        display: block;
-        margin-block-end: 10px;
-    }
-    
-    input,
-    textarea {
-        inline-size: calc(100% - 20px);
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-    
-    textarea {
-        resize: vertical;
-    }
     /* Estilo del footer */
     
     footer {

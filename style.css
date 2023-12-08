@@ -1,19 +1,9 @@
     .sangria {
-        padding-left: 20px;
+        padding-inline-start: 20px;
     }
     
     .sangria-adicional {
-        padding-left: 40px;
-    }
-    
-    .linea-svg {
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        /* Ajusta la longitud de la línea según tus necesidades */
-        height: 1px;
-        background-color: #000;
-        /* Color de la línea */
+        padding-inline-start: 40px;
     }
     
     body {
@@ -48,8 +38,8 @@
     }
     
     .social-media-icons svg {
-        width: 30px;
-        height: 30px;
+        inline-size: 30px;
+        block-size: 30px;
     }
     
     .hero {
@@ -60,7 +50,7 @@
         position: fixed;
         inset-block-start: 0;
         inset-inline-start: 0;
-        right: 0;
+        inset-inline-end: 0;
         inline-size: 100%;
         padding: 0px 0px;
         z-index: 1;
@@ -172,13 +162,13 @@
     }
     
     #lateral {
-        width: 50%;
-        float: right;
+        inline-size: 50%;
+        float: inline-end;
     }
     
     #principal {
-        width: 50%;
-        float: left;
+        inline-size: 50%;
+        float: inline-start;
     }
     
     .curriculum {
